@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -6,12 +6,27 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Business\" />
-    <Folder Include="Repositories\" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="3.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="3.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="3.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="3.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="3.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="6.0.0" />
+    <PackageReference Include="Ugly.Assembly.Loader" Version="2.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>    <ProjectReference Include="..\App.API.Services\App.Domain.API.Services.csproj" />    <ProjectReference Include="..\App.Domain.Business\App.Domain.Business.csproj" />    <ProjectReference Include="..\App.Domain.Entities\App.Domain.Entities.csproj" />    <ProjectReference Include="..\App.Domain.Persistence.File\App.Domain.Persistence.File.csproj" />    <ProjectReference Include="..\App.Domain.Persistence.MongoDb\App.Domain.Persistence.MongoDb.csproj" />    <ProjectReference Include="..\App.Infrastructure.Persistance\App.Infrastructure.Persistence.csproj" />
+
+	  <ProjectReference Include="..\App.Resources\App.Domain.Resources.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="appsettings.Production.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

@@ -1,6 +1,6 @@
-﻿namespace ConsoleApp.Entities
+﻿namespace App.Domain.Resources
 {
-    public class ApiVolumeInfoResource
+    public class ApiVolumeInfoResource : IApiVolumeInfoResource
     {
         public string Title { get; set; }
         public string Subtitle { get; set; }

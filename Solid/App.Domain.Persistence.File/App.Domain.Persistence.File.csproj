@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\App.Domain.Entities\App.Domain.Entities.csproj" />
+    <ProjectReference Include="..\App.Infrastructure.Persistance\App.Infrastructure.Persistence.csproj" />
+    <ProjectReference Include="..\App.Infrastructure.Serialization\App.Infrastructure.Serialization.csproj" />
+  </ItemGroup>
+
+</Project>

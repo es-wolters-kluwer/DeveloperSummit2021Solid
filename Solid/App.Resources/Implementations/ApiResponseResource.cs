@@ -1,8 +1,8 @@
-﻿namespace ConsoleApp.Entities
+﻿namespace App.Domain.Resources
 {
     using System;
 
-    public class ApiResponseResource
+    public class ApiResponseResource : IApiResponseResource
     {
         public ApiResponseResource()
         {
@@ -11,6 +11,6 @@
 
         public string Kind { get; set; }
         public double TotalItems { get; set; }
-        public ApiItemResource[] Items { get; set; }
+        public IApiItemResource[] Items { get; set; }
     }
 }
